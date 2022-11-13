@@ -44,6 +44,7 @@ echo.
 echo *SFC will scan your system files for corruption and try to automatically repair them.
 echo *DISM will check your Windows installation image for problems and try to automatically repair it.
 echo *After these two tasks, the script will try to delete all temporary files to speed up your pc.
+echo *After Temp Removal, 
 echo *After all task have completed, reboot your PC.
 echo.
 @pause
@@ -87,6 +88,24 @@ rd /s /q c:\windows\spool\printers
 del /f /q c:\windows\spool\printers
 del c:\WIN386.SWP
 echo Done!
+echo.
+echo --- Reset Windows Updates Starting ---
+echo.
+PAUSE
+echo.
+attrib -h -r -s %windir%system32catroot2
+attrib -h -r -s %windir%system32catroot2*.*
+net stop wuauserv
+net stop CryptSvc
+net stop BITS
+ren %windir%system32catroot2 catroot2.old
+ren %windir%SoftwareDistribution sold.old
+ren "%ALLUSERSPROFILE%\Application Data\Microsoft\Network\Downloader" downloader.old
+net Start BITS
+net start CryptSvc
+net start wuauserv
+echo.
+echo Task completed successfully...
 echo.
 echo All tasks have completed successfully!
 echo You can press any key to close this window. Reboot your PC.
