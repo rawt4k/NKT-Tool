@@ -1,6 +1,6 @@
 # NKT-Tool
 Tool for the KNT community to help repares go a little faster..
-Nico Knows Tech's Windows Fix Script v1.1 Ventis Edit!
+Nico Knows Tech's Windows Fix Script v1.1 #Ventis Edit!
 https://YouTube.com/NicoKnowsTech
 
  NOTICE: THIS SCRIPT ONLY RUNS COMMANDS BUILT INTO WINDOWS. NO THIRD PARTY APPLICATIONS OR TOOLS
