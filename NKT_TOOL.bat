@@ -45,8 +45,8 @@ echo.
 echo *SFC will scan your system files for corruption and try to automatically repair them.
 echo *DISM will check your Windows installation image for problems and try to automatically repair it.
 echo *After these two tasks, the script will try to delete all temporary files to speed up your pc.
-echo *After Temp Removal, 
-echo *After all task have completed, reboot your PC.
+echo *After Temp Removal, Windows Updates will reset
+echo *After all task have completed, Your screen will turn green and you can reboot your PC.
 echo.
 @pause
 echo Running tasks...
