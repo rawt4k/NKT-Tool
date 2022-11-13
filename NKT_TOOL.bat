@@ -97,6 +97,7 @@ net start wuauserv
 echo.
 echo Task completed successfully...
 echo.
+color 20
 echo All tasks have completed successfully!
 echo You can press any key to close this window. Reboot your PC.
 @pause
