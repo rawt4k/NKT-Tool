@@ -69,14 +69,22 @@ del /s /f /q C:\WINDOWS\Prefetch
 del /s /f /q %temp%\*.*
 rd /s /q %temp%
 md %temp%
-deltree /y c:\windows\tempor~1
-deltree /y c:\windows\temp
-deltree /y c:\windows\tmp
-deltree /y c:\windows\ff*.tmp
-deltree /y c:\windows\history
-deltree /y c:\windows\cookies
-deltree /y c:\windows\recent
-deltree /y c:\windows\spool\printers
+rd /s /q c:\windows\tempor~1
+del /f /q c:\windows\tempor~1
+rd /s /q c:\windows\temp
+del /f /q c:\windows\temp
+rd /s /q c:\windows\tmp
+del /f /q c:\windows\tmp
+rd /s /q c:\windows\ff*.tmp
+del /f /q c:\windows\ff*.tmp
+rd /s /q c:\windows\history
+del /f /q c:\windows\history
+rd /s /q c:\windows\cookies
+del /f /q c:\windows\cookies
+rd /s /q c:\windows\recent
+del /f /q c:\windows\recent
+rd /s /q c:\windows\spool\printers
+del /f /q c:\windows\spool\printers
 del c:\WIN386.SWP
 echo Done!
 echo.
