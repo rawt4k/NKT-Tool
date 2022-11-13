@@ -29,6 +29,7 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------   
 title Nico Knows Tech's Windows Fix Script v1.1
+color 90
 echo Nico Knows Tech's Windows Fix Script v1.1
 echo https://youtube.com/NicoKnowsTech
 echo.
@@ -49,6 +50,7 @@ echo *After all task have completed, reboot your PC.
 echo.
 @pause
 echo Running tasks...
+color 60
 echo.
 echo --- SYSTEM FILE CHECKER STARTED ---
 SFC /scannow
