@@ -14,7 +14,8 @@ echo 2.) DEPLOYMENT IMAGE SERVICING AND MANAGEMENT TOOL
 echo.
 echo *SFC will scan your system files for corruption and try to automatically repair them.
 echo *DISM will check your Windows installation image for problems and try to automatically repair it.
-echo *After both task have completed, reboot your PC.
+echo *After these two tasks, the script will try to delete all temporary files to speed up your pc.
+echo *After all task have completed, reboot your PC.
 echo.
 @pause
 echo Running tasks...
