@@ -92,12 +92,8 @@ echo.
 echo --- Reset Windows Updates Starting ---
 echo.
 net stop wuauserv
-net stop AeLookupSvc
-@pause
-del C:\Windows\SoftwareDistribution\DataStore\Logs\edb.log
 @pause
 net start wuauserv
-net start AeLookupSvc
 echo.
 echo Task completed successfully...
 echo.
