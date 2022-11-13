@@ -91,19 +91,13 @@ echo Done!
 echo.
 echo --- Reset Windows Updates Starting ---
 echo.
-PAUSE
-echo.
-attrib -h -r -s %windir%system32catroot2
-attrib -h -r -s %windir%system32catroot2*.*
 net stop wuauserv
-net stop CryptSvc
-net stop BITS
-ren %windir%system32catroot2 catroot2.old
-ren %windir%SoftwareDistribution sold.old
-ren "%ALLUSERSPROFILE%\Application Data\Microsoft\Network\Downloader" downloader.old
-net Start BITS
-net start CryptSvc
+net stop AeLookupSvc
+@pause
+del C:\Windows\SoftwareDistribution\DataStore\Logs\edb.log
+@pause
 net start wuauserv
+net start AeLookupSvc
 echo.
 echo Task completed successfully...
 echo.
