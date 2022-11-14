@@ -29,7 +29,6 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------   
 title Nico Knows Tech's Windows Fix Script v1.1
-color 90
 echo Nico Knows Tech's Windows Fix Script v1.1
 echo https://youtube.com/NicoKnowsTech
 echo.
