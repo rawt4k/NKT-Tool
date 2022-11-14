@@ -33,8 +33,6 @@ This tool will attempt to fix common Windows issues by running two built-in Wind
 *DISM will check your Windows installation image for problems and try to automatically repair it.
 *After both task have completed, reboot your PC.
 ---------------------------------------------------
-# THE TOOL WILL BE BLUE WHEN YOU OPEN IT
-![Screenshot 2022-11-13 173657](https://user-images.githubusercontent.com/91895035/201548193-6a31d3d9-e873-4a78-8816-8bfb207bd4e0.png)
 
 # THE TOOL WILL BE YELLOW WHEN THE TOOL IS RUNNING ALL THE TASKS
 ![vmware_Z4GTFheSPq](https://user-images.githubusercontent.com/91895035/201548275-5c5dbac9-f891-4230-9ddc-12bf34ab05f0.png)
