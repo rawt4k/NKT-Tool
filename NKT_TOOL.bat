@@ -53,6 +53,11 @@ echo *After these two tasks, the script will try to delete all temporary files t
 echo *After Temp Removal, Windows Update will reset to resolve most Windows Update issues.
 echo *After all task have completed, Your screen will turn green and you can reboot your PC.
 echo.
+echo.
+set "reply=y"
+set /p "reply=DO YOU AGREE THAT NICO KNOWS TECH CANNOT BE HELD LIABLE FOR ANY DAMAGE CAUSED BY USING THIS TOOL? %USERREG%? [y|n]: "
+if /i not "%reply%" == "y" goto :eof
+echo.
 @pause
 echo Creating a restore point in case something goes wrong...
 echo.
