@@ -28,26 +28,36 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 :--------------------------------------   
-title Nico Knows Tech's Windows Fix Script v1.1
-echo Nico Knows Tech's Windows Fix Script v1.1
+title Nico Knows Tech's Windows Automatic Fix Tool v1.1
+echo Nico Knows Tech's Windows Automatic Fix Tool v1.1
+echo Written by Nico and Ventispurr
 echo https://youtube.com/NicoKnowsTech
 echo.
-echo NOTICE: THIS SCRIPT ONLY RUNS COMMANDS BUILT INTO WINDOWS. NO THIRD PARTY APPLICATIONS OR TOOLS
-echo ARE USED BY THIS SCRIPT. THIS SCRIPT WAS DESIGNED TO SIMPLIFY THESE TASKS FOR THE EVERY DAY USER.
+echo NOTICE: THIS OPEN SOURCE TOOL IS A SCRIPT DESIGNED TO AUTOMATE COMMON TASKS USED BY IT PROFESSIONALS
+echo AND PC REPAIR SERVICES. THIS SCRIPT ONLY RUNS COMMANDS BUILT INTO WINDOWS. NO THIRD PARTY APPLICATIONS 
+echo OR TOOLS ARE USED BY THIS SCRIPT. BY USING THIS TOOL YOU AGREE THAT NICO KNOWS TECH CANNOT BE HELD LIABLE 
+echo FOR ANY DAMAGE CAUSED BY USING THIS TOOL. IF YOU DO NOT AGREE, CLOSE THIS WINDOW NOW. USE AT YOUR OWN RISK.
 echo.
 echo.
-echo This tool will attempt to fix common Windows issues by running two built-in Windows functions:
+echo.
+echo *** This tool will attempt to fix common Windows issues by running these Windows tasks:
 echo.
 echo 1.) SYSTEM FILE CHECKER
 echo 2.) DEPLOYMENT IMAGE SERVICING AND MANAGEMENT TOOL
+echo 3.) TEMP FILE REMOVAL
+echo 4.) WINDOWS UPDATE RESET
 echo.
 echo *SFC will scan your system files for corruption and try to automatically repair them.
 echo *DISM will check your Windows installation image for problems and try to automatically repair it.
 echo *After these two tasks, the script will try to delete all temporary files to speed up your pc.
-echo *After Temp Removal, Windows Updates will reset
+echo *After Temp Removal, Windows Update will reset to resolve most Windows Update issues.
 echo *After all task have completed, Your screen will turn green and you can reboot your PC.
 echo.
 @pause
+echo Creating a restore point in case something goes wrong...
+echo.
+wmic.exe /Namespace:\\root\default Path SystemRestore Call CreateRestorePoint "<Before NKT Tool>", 100, 7
+echo.
 echo Running tasks...
 color 60
 echo.
